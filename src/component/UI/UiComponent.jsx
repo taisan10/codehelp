@@ -103,137 +103,6 @@ export   function SectionTitle({ eyebrow, title, subtitle }) {
 }
 
 
-<<<<<<< HEAD
-
-import {  useEffect, useRef } from "react";
-
-export function ServicesCarousel() {
-  const cards = [
-    {
-      title: "Digital",
-      desc: "Paid media, SEO, and full-funnel content. Data-backed campaigns that turn attention into revenue.",
-      chips: ["SEO & PPC", "Social Ads", "Email Flows", "Lead Gen", "Paid Scaling", "Conversion"],
-    },
-    {
-      title: "Design",
-      desc: "Brand systems, social creatives, motion, and landing pages. Beautiful work that performs.",
-      chips: ["Brand Identity", "Reels & Video", "Pitch Decks", "Landing Pages"],
-    },
-    {
-      title: "Web",
-      desc: "Fast, accessible, SEO-ready sites and CRO-focused pages, built for speed and scale.",
-      chips: ["Next.js", "Headless CMS", "CRO", "Analytics", "Headless CMS"],
-    },
-    {
-      title: "Consulting",
-      desc: "Strategy sprints, audits, and training to level up your in-house team and systems.",
-      chips: ["GTM", "Attribution", "Playbooks", "Workshops", "Headless CMS"],
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
-  const intervalRef = useRef(null);
-
-  // Auto-slide start
-  const startAutoSlide = () => {
-    stopAutoSlide();
-    intervalRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
-    }, 4000); // 5s delay
-  };
-
-  // Stop auto-slide
-  const stopAutoSlide = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-  };
-
-  useEffect(() => {
-    startAutoSlide();
-    return () => stopAutoSlide();
-  }, [cards.length]);
-
-  // Swipe handlers
-  const handleTouchStart = (e) => {
-    stopAutoSlide();
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 50) {
-      setCurrentIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
-    }
-    if (touchStart - touchEnd < -50) {
-      setCurrentIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
-    }
-    startAutoSlide();
-  };
-
-  return (
-    <div
-      className="relative w-full overflow-hidden py-12  text-white"
-      onMouseEnter={stopAutoSlide}
-      onMouseLeave={startAutoSlide}
-    >
-      {/* Carousel Container */}
-      <div className="relative mx-auto w-full sm:w-[90%] max-w-6xl overflow-hidden">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {cards.map((item, index) => (
-            <div key={index} className="w-full flex-shrink-0 px-4 md:px-8">
-              <div className="bg-[#1a1a1a] p-5 sm:p-10 rounded-4xl shadow-xl">
-                <h2 className="text-2xl md:text-4xl font-bold mb-4">{item.title}</h2>
-                <p className="text-gray-400 text-sm sm:text-base mb-6">{item.desc}</p>
-                <div className="flex flex-wrap gap-3 mt-18">
-                  {item.chips.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="bg-gray-500 text-gray-300 px-3 py-1 rounded-full text-xs sm:text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}   
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Dots */}
-      <div className="flex justify-center mt-6 gap-2">
-        {cards.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              stopAutoSlide();
-              setCurrentIndex(i);
-              startAutoSlide();
-            }}
-            className={`w-3 h-3 rounded-full transition ${
-              currentIndex === i ? "bg-sky-500" : "bg-gray-500/50"
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Shadows */}
-      <div className="absolute top-0 left-0 h-full w-[5%] bg-gradient-to-r from-black to-transparent pointer-events-none z-5" />
-      <div className="absolute top-0 right-0 h-full w-[5%] bg-gradient-to-l from-black to-transparent pointer-events-none z-5" />
-    </div>
-  );
-}
-
-=======
->>>>>>> 3b6d227 (First commit)
 export   function Avatar({ src, alt }) {
   return (
     <img
@@ -331,63 +200,9 @@ export function MobileNav({ open, setOpen, navItems }) {
 
 
 // Continuous marquee for client logos (only images)
-<<<<<<< HEAD
-export function LogosMarquee({ items = [] }) {
-  const rows = [items, [...items].reverse()];
-=======
->>>>>>> 3b6d227 (First commit)
 
 export function LogoCarousel({ items }) {
   return (
-<<<<<<< HEAD
-    <div className="relative overflow-hidden">
-      {/* edge gradients */}
-      <div
-        aria-hidden={true}
-        className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-neutral-950 to-transparent"
-      />
-      <div
-        aria-hidden={true}
-        className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-neutral-950 to-transparent"
-      />
-
-      {/* keyframes */}
-      <style>{`
-        @keyframes marqueeX {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-      `}</style>
-
-      {rows.map((row, i) => (
-        <div key={i} className="flex overflow-hidden">
-          <div
-            className="flex shrink-0 items-center gap-8 sm:gap-12 py-6 animate-[marqueeX_linear_infinite]"
-            style={{
-              animationDuration: i === 0 ? "28s" : "32s",
-              animationDirection: i === 1 ? "reverse" : "normal",
-              width: "200%",
-            }}
-          >
-            {[...row, ...row].map((src, idx) => (
-              <div
-                key={idx}
-                className="h-8 sm:h-19 opacity-80 hover:opacity-100 transition"
-              >
-                <img
-                  src={src}
-                  alt={`logo-${idx}`}
-                  className="h-full w-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-=======
     <section className="py-10 overflow-hidden">
       <div className="animate-slide flex gap-10 items-center whitespace-nowrap w-max">
         {[...items, ...items].map((src, index) => (
@@ -402,31 +217,24 @@ export function LogoCarousel({ items }) {
     </section>
   );
 }
-export function CaseStudyTemplate({ title, description, image }) {
-  return (
-    <section className="w-full py-12 px-6 md:px-20 bg-orange-50">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-        
-        {/* Left: Text */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-4">
-            {title}
-          </h2>
-          <p className="text-base md:text-lg text-orange-800 leading-relaxed">
-            {description}
-          </p>
-        </div>
 
-        {/* Right: Image */}
-        <div className="md:w-1/2">
-          <img
-            src={image}
-            alt={title}
-            className="w-full max-w-md mx-auto rounded-xl shadow-lg"
-          />
-        </div>
+export function CaseStudySection({ title, description, image }) {
+  return (
+    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 py-10 border-b border-gray-200">
+      {/* Left: Text */}
+      <div className="md:w-1/2 text-center md:text-left">
+        <h2 className="text-2xl font-bold mb-4 text-black ">{title}</h2>
+        <p className="text-gray-700 leading-relaxed">{description}</p>
       </div>
-    </section>
+
+      {/* Right: Image */}
+      <div className="md:w-1/2">
+        <img
+          src={image}
+          alt={title}
+          className="w-full max-w-sm mx-auto rounded-xl shadow-md"
+        />
+      </div>
+    </div>
   );
 }
->>>>>>> 3b6d227 (First commit)

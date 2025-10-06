@@ -237,25 +237,11 @@ export default function Video() {
     <section>
       <Container>
         {/* ✅ Category Tabs */}
-<<<<<<< HEAD
-      <div className="w-full rounded-xl p-4 flex flex-wrap gap-4 justify-center bg-cream-50">
-  {categories.map((cat) => (
-    <button
-      key={cat}
-      onClick={() => setActiveCategory(cat)}
-      className={`px-5 py-2 rounded-full text-sm font-medium transition border ${
-        activeCategory === cat
-          ? "bg-sky-500 text-white border-sky-500"
-          : "bg-white text-black border-cream-300 hover:bg-cream-100"
-      }`}
-    >
-      {cat}
-    </button>
-  ))}
-</div>
+
+      
 
 
-=======
+
      <div className="w-full rounded-xl p-4 flex flex-wrap gap-3 justify-center bg-cream-50">
   {categories.map((cat) => {
     const isActive = activeCategory === cat;
@@ -275,7 +261,7 @@ export default function Video() {
   })}
 </div>
 
->>>>>>> 3b6d227 (First commit)
+
         {/* ✅ Videos Slider */}
         <div className="relative w-full py-10 overflow-hidden">
           <div

@@ -202,13 +202,12 @@ const Work = () => (
   <div>
     <HeroSection />
     <CaseStudyLayout />
-<<<<<<< HEAD
-=======
+
     
     {/* <ServicesProvidedSection /> */}
     {/* <ChallengeSection /> */}
     {/* <ApproachSection /> */}
->>>>>>> 3b6d227 (First commit)
+
   </div>
 );
 

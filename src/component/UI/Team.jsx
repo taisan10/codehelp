@@ -1,20 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import {
-  Container,
-  GradientText,
-  PrimaryButton,
-  SectionTitle,
-  Stat,
-  ServicesCarousel,
-  TeamStrip,
-  LogosMarquee,
-} from "./UiComponent";
-
-export default function Team(){
-=======
 import {
   Container,
 
@@ -24,8 +10,9 @@ import {
 
 } from "../UI/UiComponent";
 
+
 export  default function Team(){
->>>>>>> 3b6d227 (First commit)
+
   <section className="py-12 sm:py-16">
             <Container>
               <div className="rounded-3xl bg-gradient-to-r from-sky-600/80 via-black-400/40 to-teal-600/80 p-6 sm:p-8 ring-1 ring-white/10">
