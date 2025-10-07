@@ -112,11 +112,11 @@ useEffect(() => {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2  md:hidden">
             <PrimaryButton href="#contact">Contact Us</PrimaryButton>
             <button
               aria-label="Open menu"
-              className="grid h-10 w-10 place-items-center rounded-full ring-1 ring-black/10"
+              className="grid h-10 w-15 place-items-center rounded-full ring-1 ring-black/10"
               onClick={() => setOpen(true)}
             >
               <svg

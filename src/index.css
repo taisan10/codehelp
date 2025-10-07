@@ -44,3 +44,7 @@
 .animate-slide {
   animation: slide 60s linear infinite; /* slow */
 }
+
+/* in globals.css or tailwind.config.js */
+.w-35\% { width: 35%; }
+.w-65\% { width: 65%; }

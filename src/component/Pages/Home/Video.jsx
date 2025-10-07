@@ -234,7 +234,7 @@ export default function Video() {
   };
 
   return (
-    <section>
+    <section className="-mt-20">
       <Container>
         {/* ✅ Category Tabs */}
 
@@ -266,7 +266,7 @@ export default function Video() {
 
 
         {/* ✅ Videos Slider */}
-        <div className="relative w-full py-10 overflow-hidden">
+        <div className="relative w-full py-10 overflow-hidden ">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{

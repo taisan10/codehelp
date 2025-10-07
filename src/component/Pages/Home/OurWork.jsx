@@ -199,12 +199,12 @@ export default function Work() {
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               {activeWork.name}
             </h3>
-            <p className="text-base sm:text-lg opacity-90">
+            <p className="hidden text-base sm:text-lg opacity-90">
               {activeWork.description}
             </p>
 
             {/* Stats */}
-            <div className="hidden md:grid grid-cols-2 gap-4 mt-4">
+            <div className="grid md:grid grid-cols-2 gap-4 mt-4">
               {activeWork.stats.map((stat, idx) => (
                 <div
                   key={idx}
