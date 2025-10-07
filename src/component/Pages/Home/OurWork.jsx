@@ -1,7 +1,7 @@
 
 import { PrimaryButton,GradientText,Container } from "../../UI/UiComponent";
-
 import { useState } from "react";
+
 const worksData = [
   {
     id: 1,
@@ -23,7 +23,7 @@ const worksData = [
     id: 2,
     name: "Desi_Garden",
     img: "/Our_Service/2.png",
-    theme: "bg-green-100 text-white",
+    theme: "bg-green-100 text-black",
     description: "Fintech Corp drove massive user deposits through campaigns.",
     stats: [
       { label: "Deposits", value: "20M" },
@@ -50,7 +50,7 @@ theme: "bg-yellow-50 text-black",
     id: 4,
     name: "Pita Nutso",
    img: "/Our_Service/4.png",
-    theme: "bg-gradient-to-r from-purple-300 to-indigo-300 text-white",
+    theme: "bg-gradient-to-r from-purple-300 to-indigo-300 text-black",
 
     description: "AI Hub’s awareness campaign across social platforms.",
     stats: [
@@ -106,7 +106,7 @@ theme: "bg-yellow-50 text-black",
     id: 8,
     name: "BB_Station",
     img: "/Our_Service/8.png",
-    theme: "bg-blue-300 text-white",
+    theme: "bg-blue-300 text-black",
 
     description: "ForexWorld boosted lead generation via campaigns.",
     stats: [
@@ -162,102 +162,123 @@ export default function Work() {
 
   const activeWork = worksData[activeIndex];
 
-  return (
-    <section className="py-16 px-4 md:px-12 text-center">
+   return (
+    <section className="py-12 px-4 sm:px-6 md:px-12 text-center">
       <Container>
-      {/* Heading */}
-      <h2 className="text-3xl md:text-6xl font-bold mb-10">Our Works</h2>
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-8 sm:mb-10">
+          Our Works
+        </h2>
 
-      {/* Company Tabs */}
-      <div className="flex flex-wrap justify-center gap-3 mb-8 ">
-        {worksData.map((work, index) => (
-          <button
-            key={work.id}
-            onClick={() => setActiveIndex(index)}
-            className={`px-4 py-2 rounded-full text-sm md:text-md transition 
-              ${
+        {/* Company Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+          {worksData.map((work, index) => (
+            <button
+              key={work.id}
+              onClick={() => setActiveIndex(index)}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-md transition-all duration-300 ${
                 activeIndex === index
                   ? "bg-gradient-to-r from-purple-500 to-sky-400 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
-          >
-            {work.name}
-          </button>
-        ))}
-      </div>
-{/* Active Work Details */}
-<div className={`${activeWork.theme} rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10 shadow-xl text-white`}>
-
-  {/* Left: Text Content */}
-  <div className="md:w-[50%] flex flex-col gap-6">
-    <h3 className="text-4xl font-bold text-black">{activeWork.name}</h3>
-    <p className="text-lg opacity-90 text-black">{activeWork.description}</p>
-
-    {/* Stats */}
-    <div className="grid grid-cols-2 gap-4 mt-4">
-      {activeWork.stats.map((stat, idx) => (
-        <div key={idx} className="bg-white text-black rounded-xl px-4 py-3 text-center shadow-md">
-          <div className="text-2xl font-bold">{stat.value}</div>
-          <div className="text-sm font-medium">{stat.label}</div>
+            >
+              {work.name}
+            </button>
+          ))}
         </div>
-      ))}
-    </div>
 
-    {/* Read More Button */}
-    <div className="mt-6">
-      <PrimaryButton href="#contact">Read More</PrimaryButton>
-    </div>
-  </div>
+        {/* Active Work Details */}
+        <div
+          className={`${activeWork.theme} rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10 shadow-xl`}
+        >
+          {/* Left: Text Content */}
+          <div className="w-full md:w-1/2 flex flex-col gap-4 sm:gap-6 text-center md:text-left">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              {activeWork.name}
+            </h3>
+            <p className="text-base sm:text-lg opacity-90">
+              {activeWork.description}
+            </p>
 
-  {/* Right: Tablet-style Image */}
-  <div className="md:w-[50%] flex justify-center">
-    <img
-      src={activeWork.img}
-      alt={activeWork.name}
-      className="w-full max-w-md rounded-2xl  object-cover"
-    />
-  </div>
-</div>
+            {/* Stats */}
+            <div className="hidden md:grid grid-cols-2 gap-4 mt-4">
+              {activeWork.stats.map((stat, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white text-black rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-center shadow-md"
+                >
+                  <div className="text-lg sm:text-2xl font-bold">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs sm:text-sm font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
 
-      {/* Bottom Navigation */}
-      <div className="mt-10 flex justify-center items-center gap-4">
-       <PrimaryButton href="#contact">See More Success Stories</PrimaryButton>
-          
-        <div className="flex gap-3">
-  {/* Previous Button */}
-  <button
-    onClick={prevWork}
-    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 text-white shadow-md"
-  >
-    <svg
-      className="w-5 h-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-    </svg>
-  </button>
+            {/* Read More Button */}
+            <div className="mt-5 sm:mt-6 items-center">
+              <PrimaryButton href="#contact">Read More</PrimaryButton>
+            </div>
+          </div>
 
-  {/* Next Button */}
-  <button
-    onClick={nextWork}
-    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 text-white shadow-md"
-  >
-    <svg
-      className="w-5 h-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-</div>
+          {/* Right: Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={activeWork.img}
+              alt={activeWork.name}
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-xl sm:rounded-2xl object-cover"
+            />
+          </div>
+        </div>
 
-      </div>
+        {/* Bottom Navigation */}
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+          <PrimaryButton href="#contact">See More Success Stories</PrimaryButton>
+
+          <div className="flex gap-2 sm:gap-3">
+            {/* Prev */}
+            <button
+              onClick={prevWork}
+              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 text-white shadow-md"
+            >
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            {/* Next */}
+            <button
+              onClick={nextWork}
+              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 text-white shadow-md"
+            >
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </Container>
     </section>
   );

@@ -32,9 +32,9 @@ export default function Footer() {
   <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube" className="w-10 h-6 mt-5" />
   </a>
-  {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
     <img src="https://www.svgrepo.com/show/475661/linkedin-color.svg" alt="LinkedIn" className="w-10 h-6 mt-5" />
-  </a> */}
+  </a>
   <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.simpleicons.org/tiktok/000000" alt="TikTok" className="w-10 h-6 mt-5" />
   </a>
