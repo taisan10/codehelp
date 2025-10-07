@@ -170,22 +170,24 @@ export default function Work() {
           Our Works
         </h2>
 
-        {/* Company Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
-          {worksData.map((work, index) => (
-            <button
-              key={work.id}
-              onClick={() => setActiveIndex(index)}
-              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-md transition-all duration-300 ${
-                activeIndex === index
-                  ? "bg-gradient-to-r from-purple-500 to-sky-400 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              {work.name}
-            </button>
-          ))}
-        </div>
+      {/* Company Tabs */}
+<div className="w-full overflow-x-auto scrollbar-hide scroll-smooth mb-6 sm:mb-10">
+  <div className="flex flex-nowrap sm:flex-wrap justify-start sm:justify-center gap-2 sm:gap-3 px-1 sm:px-0 min-w-max sm:min-w-0">
+    {worksData.map((work, index) => (
+      <button
+        key={work.id}
+        onClick={() => setActiveIndex(index)}
+        className={`whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-md font-medium transition-all duration-300 ${
+          activeIndex === index
+            ? "bg-gradient-to-r from-purple-500 to-sky-400 text-white"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+      >
+        {work.name}
+      </button>
+    ))}
+  </div>
+</div>
 
         {/* Active Work Details */}
         <div

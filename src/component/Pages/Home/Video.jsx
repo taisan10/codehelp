@@ -159,21 +159,21 @@ export default function Video() {
       "/videos/video4.mov",
       "/videos/video1.mp4",
     ],
-    VideoProduction: [
+    "Video Production": [
       "/videos/video2.mov",
       "/videos/video4.mov",
       "/videos/bg1.mp4",
       "/videos/video3.MP4",
       "/videos/video1.mp4",
     ],
-    PersonalBranding: [
+    "Personal Branding": [
       "/videos/bg1.mp4",
       "/videos/video1.mp4",
     "/videos/video3.MP4",
     "/videos/video2.mov",
     "/videos/video4.mov",
     ],
-    InfluencerMarketing: [
+    "Influencer Marketing": [
       "/videos/video1.mp4",
       "/videos/video3.MP4",
       "/videos/video2.mov",
@@ -242,23 +242,26 @@ export default function Video() {
 
 
 
-     <div className="w-full rounded-xl p-4 flex flex-wrap gap-3 justify-center bg-cream-50">
-  {categories.map((cat) => {
-    const isActive = activeCategory === cat;
-    return (
-      <button
-        key={cat}
-        onClick={() => setActiveCategory(cat)}
-        className={`px-10 py-2 rounded-full text-lg font-medium transition border ${
-          isActive
-            ? "bg-sky-500 text-white border-sky-500 shadow-md"
-            : "bg-white text-gray-800 border-cream-300 hover:bg-cream-100"
-        }`}
-      >
-        {cat}
-      </button>
-    );
-  })}
+     {/* Category Buttons Section */}
+<div className="w-full overflow-x-auto scrollbar-hide scroll-smooth">
+  <div className="flex flex-nowrap sm:flex-wrap gap-3 justify-start sm:justify-center p-4 min-w-max sm:min-w-0 bg-cream-50 rounded-xl">
+    {categories.map((cat) => {
+      const isActive = activeCategory === cat;
+      return (
+        <button
+          key={cat}
+          onClick={() => setActiveCategory(cat)}
+          className={`whitespace-nowrap px-8 sm:px-10 py-2 rounded-full text-base sm:text-lg font-medium transition border ${
+            isActive
+              ? "bg-sky-500 text-white border-sky-500 shadow-md"
+              : "bg-white text-gray-800 border-cream-300 hover:bg-cream-100"
+          }`}
+        >
+          {cat}
+        </button>
+      );
+    })}
+  </div>
 </div>
 
 

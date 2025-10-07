@@ -19,6 +19,9 @@
   animation: marquee-reverse 20s linear infinite;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE aur Edge ke liye */
