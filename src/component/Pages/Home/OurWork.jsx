@@ -50,7 +50,7 @@ theme: "bg-yellow-50 text-black",
     id: 4,
     name: "Pita Nutso",
    img: "/Our_Service/4.png",
-    theme: "bg-gradient-to-r from-purple-600 to-indigo-600 text-white",
+    theme: "bg-gradient-to-r from-purple-300 to-indigo-300 text-white",
 
     description: "AI Hub’s awareness campaign across social platforms.",
     stats: [

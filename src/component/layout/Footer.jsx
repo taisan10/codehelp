@@ -2,7 +2,7 @@ import { Container, Logo } from "../UI/UiComponent";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10 bg-black text-white">
+    <footer className="border-t border-white/10 py-10 bg-black  text-white">
       <Container className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
         {/* Column 1: Logo + Contact + Social */}
@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           {/* Social Icons with iframe or SVG */}
-         <div className="flex gap-4 pt-2 mb-4 bg-gray-50 h-20 mt-10">
+         <div className="flex gap-4 pt-2 mb-4 bg-gray-50 h-20 mt-10 rounded-xl">
   <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook" className="w-10 h-6 mt-5" />
   </a>
@@ -105,7 +105,7 @@ export default function Footer() {
         © {new Date().getFullYear()} Bluenose Digital Marketing. All rights reserved. &nbsp;
         <a href="/terms" className="underline">Terms of Service</a> |{" "}
         <a href="/privacy" className="underline">Privacy Policy</a> |{" "}
-        <a href="/cookies" className="underline">Cookie Policy</a> | Hide Corporation Ltd
+        <a href="/cookies" className="underline">Cookie Policy</a> 
       </div>
     </footer>
   );
