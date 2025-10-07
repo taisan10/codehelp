@@ -57,9 +57,7 @@ export default function Work() {
   return (
     <section className="py-16 px-4 md:px-12 text-center">
       <Container>
-      {/* Heading */}
-      <h2 className="text-3xl md:text-6xl font-bold mb-10">Our Works</h2>
-
+    
 {/* Active Work Details */}
 <div className={`${activeWork.theme} rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10 shadow-xl text-white`}>
 

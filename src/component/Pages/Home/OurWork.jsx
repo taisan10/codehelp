@@ -1,6 +1,7 @@
 
 import { PrimaryButton,GradientText,Container } from "../../UI/UiComponent";
 import { useState } from "react";
+// import worksData from "./Work";
 
 const worksData = [
   {
@@ -221,7 +222,7 @@ export default function Work() {
 
             {/* Read More Button */}
             <div className="mt-5 sm:mt-6 items-center">
-              <PrimaryButton href="#contact">Read More</PrimaryButton>
+              <PrimaryButton href={`/work`}>Read More</PrimaryButton>
             </div>
           </div>
 

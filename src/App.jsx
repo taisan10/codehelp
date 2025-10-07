@@ -5,6 +5,7 @@ import Home from "./component/Pages/Home/index/Home";
 import Work from "./component/Pages/Work";
 import Company from "./component/Pages/Company";
 import Contact from "./component/Pages/Contact";
+// import WorkDetail from "./component/Pages/Home/WorkDetail";
 
 
 // ✅ Service Routes import
@@ -23,6 +24,7 @@ export default function App() {
           ))}
 
           <Route path="/work" element={<Work />} />
+          {/* <Route path="/work/:id" element={<WorkDetail />} /> */}
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
