@@ -2,8 +2,7 @@ import { Container, } from "../UI/UiComponent"
 import { useState } from "react";
 
 export default function ContactPage() {
-   
-    const [formData, setFormData] = useState({
+   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -11,26 +10,38 @@ export default function ContactPage() {
     message: "",
   });
 
+  const [status, setStatus] = useState(""); // success or error message
   const [loading, setLoading] = useState(false);
 
+  // Input change handler
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // Form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Basic validation
+    if (!formData.firstName || !formData.email || !formData.message) {
+      setStatus("Please fill in all required fields.");
+      return;
+    }
+
     setLoading(true);
+    setStatus("");
 
     try {
-      const response = await fetch("http://localhost:3000/api/Contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        alert("✅ Form submitted successfully!");
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("✅ Message sent successfully!");
         setFormData({
           firstName: "",
           lastName: "",
@@ -39,18 +50,17 @@ export default function ContactPage() {
           message: "",
         });
       } else {
-        alert("❌ Failed to submit form.");
+        setStatus("❌ Failed to send message.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("⚠️ Something went wrong!");
-    } finally {
-      setLoading(false);
+      console.error(error);
+      setStatus("❌ Something went wrong. Try again later.");
     }
-  }
 
+    setLoading(false);
+  };
 
-
+  
   return (
     <section id="contact" className="py-16 sm:py-20">
                  <Container className="grid gap-8 sm:gap-12 md:grid-cols-2 items-start">
