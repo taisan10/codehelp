@@ -2,6 +2,8 @@
 import { PrimaryButton,GradientText,Container } from "../../UI/UiComponent";
 import { useState } from "react";
 // import worksData from "./Work";
+import { useSwipeable } from "react-swipeable";
+
 
 const worksData = [
   {
@@ -163,6 +165,15 @@ export default function Work() {
 
   const activeWork = worksData[activeIndex];
 
+  // Swipe handlers
+const handlers = useSwipeable({
+  onSwipedLeft: () => nextWork(),   // Swipe left → next
+  onSwipedRight: () => prevWork(),  // Swipe right → previous
+  preventDefaultTouchmoveEvent: true,
+  trackMouse: true,                 // desktop drag bhi support
+});
+
+
    return (
     <section className="py-12 px-4 sm:px-6 md:px-12 text-center">
       <Container>
@@ -180,8 +191,8 @@ export default function Work() {
         onClick={() => setActiveIndex(index)}
         className={`whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-md font-medium transition-all duration-300 ${
           activeIndex === index
-            ? "bg-gradient-to-r from-purple-500 to-sky-400 text-white"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? `${activeWork.theme}`
+            : "bg-gray-50 text-gray-700 hover:bg-gray-200"
         }`}
       >
         {work.name}
@@ -189,52 +200,49 @@ export default function Work() {
     ))}
   </div>
 </div>
+{/* Active Work Details with swipe support */}
+<div
+  {...handlers}
+  className={`${activeWork.theme} rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10 shadow-xl`}
+>
+  {/* Left: Text Content */}
+  <div className="w-full md:w-1/2 flex flex-col gap-4 sm:gap-6 text-center md:text-left">
+    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+      {activeWork.name}
+    </h3>
+    <p className="hidden text-base sm:text-lg opacity-90">
+      {activeWork.description}
+    </p>
 
-        {/* Active Work Details */}
+    {/* Stats */}
+    <div className="grid md:grid grid-cols-2 gap-4 mt-4">
+      {activeWork.stats.map((stat, idx) => (
         <div
-          className={`${activeWork.theme} rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10 shadow-xl`}
+          key={idx}
+          className="bg-white text-black rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-center shadow-md"
         >
-          {/* Left: Text Content */}
-          <div className="w-full md:w-1/2 flex flex-col gap-4 sm:gap-6 text-center md:text-left">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              {activeWork.name}
-            </h3>
-            <p className="hidden text-base sm:text-lg opacity-90">
-              {activeWork.description}
-            </p>
-
-            {/* Stats */}
-            <div className="grid md:grid grid-cols-2 gap-4 mt-4">
-              {activeWork.stats.map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white text-black rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-center shadow-md"
-                >
-                  <div className="text-lg sm:text-2xl font-bold">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs sm:text-sm font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Read More Button */}
-            <div className="mt-5 sm:mt-6 items-center">
-              <PrimaryButton href={`/work`}>Read More</PrimaryButton>
-            </div>
-          </div>
-
-          {/* Right: Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={activeWork.img}
-              alt={activeWork.name}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-xl sm:rounded-2xl object-cover"
-            />
-          </div>
+          <div className="text-lg sm:text-2xl font-bold">{stat.value}</div>
+          <div className="text-xs sm:text-sm font-medium">{stat.label}</div>
         </div>
+      ))}
+    </div>
+
+    {/* Read More Button */}
+    <div className="mt-5 sm:mt-6 items-center">
+      <PrimaryButton href={`/work`}>Read More</PrimaryButton>
+    </div>
+  </div>
+
+  {/* Right: Image */}
+  <div className="w-full md:w-1/2 flex justify-center">
+    <img
+      src={activeWork.img}
+      alt={activeWork.name}
+      className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-xl sm:rounded-2xl object-cover"
+    />
+  </div>
+</div>
+
 
         {/* Bottom Navigation */}
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">

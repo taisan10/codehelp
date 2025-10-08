@@ -99,32 +99,31 @@ export default function Video() {
     );
   };
 
-  // Section Ref
-  const sectionRef = useRef(null);
+const sectionRef = useRef(null);
+const videoRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            // Agar section poora viewport se bahar चला गया
-            setMutedStates((prev) => prev.map(() => true));
-          }
-        });
-      },
-      { threshold: 0 } // jaise hi section bahar jaye, trigger ho
-    );
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          // Section bahar gaya, sab videos mute
+          videoRefs.current.forEach((vid) => {
+            if (vid) vid.muted = true;
+          });
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+  if (sectionRef.current) observer.observe(sectionRef.current);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+  return () => {
+    if (sectionRef.current) observer.unobserve(sectionRef.current);
+  };
+}, []);
+
 
   return (
     <section className="-mt-20">
@@ -171,7 +170,8 @@ export default function Video() {
                 <div className="relative w-full aspect-[9/16] bg-black rounded-[2rem] border border-neutral-800 shadow-xl overflow-hidden">
                   {/* Video */}
                   <video
-                    
+                    ref={(el) => (videoRefs.current[idx] = el)}
+  
                     src={video}
                     className="w-full h-full object-cover"
                     autoPlay
