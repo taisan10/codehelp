@@ -12,9 +12,9 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="text-sm space-y-1 text-white/80">
-            <a href="https://bluenosemarketing.com" target="_blank" rel="noopener noreferrer">bluenosemarketing.com</a>
+            <a href="/" target="_blank" rel="noopener noreferrer">bluenosemarketing.com</a>
             <p>+91 72319 20002</p>
-            <p>+1 (902) 718-9007</p>
+            <p>+1 (902) 448-5080</p>
            
           </div>
 
@@ -103,12 +103,12 @@ export default function Footer() {
           <h4 className="font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li><a href="/services/social-media">Social Media</a></li>
-            <li><a href="/services/paid-advertising">Paid Advertising</a></li>
-            <li><a href="/services/seo">SEO</a></li>
-            <li><a href="/services/influencer-marketing">Influencer Marketing</a></li>
-            <li><a href="/services/content-marketing">Content Marketing</a></li>
-            <li><a href="/services/design">Digital Design</a></li>
-            <li><a href="/services/development">Web & Mobile Development</a></li>
+            <li><a href="/services/paid-advertising">Graphic Designing</a></li>
+            <li><a href="/services/seo">Video Editing</a></li>
+            <li><a href="/services/influencer-marketing">VideoGraphy</a></li>
+            {/* <li><a href="/services/content-marketing">Content Marketing</a></li> */}
+            {/* <li><a href="/services/design">Digital Design</a></li> */}
+            {/* <li><a href="/services/development">Web & Mobile Development</a></li> */}
           </ul>
         </div>
 

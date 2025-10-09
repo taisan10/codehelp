@@ -6,27 +6,26 @@ import { useSwipeable } from "react-swipeable";
 
 
 const worksData = [
-  {
+   {
     id: 1,
-    name: "Adda",
-    img: "/Our_Service/1.png",
-    alt: "uihhlh",
-   theme: "bg-gray-300 text-black",
+    name: "Triveeni Events",
+    img: "/Our_Service/6.png",
+    theme: "bg-green-100 text-black",
 
-    description:
-      "500,000 Views on Twitter in 3 Months: Influencer Marketing for Betmode’s Gambling Platform",
+    description: "Healthcare brand awareness campaign in 2 months.",
     stats: [
-      { label: "Views", value: "517,507" },
-      { label: "Likes", value: "7,701" },
-      { label: "Reposts", value: "2,530" },
-      { label: "Comments", value: "2,343" },
+      { label: "Total Views", value: "1.3M+" },
+      { label: "Accounts Reached", value: "439K+" },
+      { label: "Followers (136% Growth)", value: "713" },
+      { label: "Organic Reach", value: "89%" },
     ],
   },
+  
   {
     id: 2,
     name: "Desi_Garden",
     img: "/Our_Service/2.png",
-    theme: "bg-green-100 text-black",
+    theme: "bg-green-200 text-black",
     description: "Fintech Corp drove massive user deposits through campaigns.",
     stats: [
       { label: "Deposits", value: "20M" },
@@ -77,18 +76,20 @@ theme: "bg-yellow-50 text-black",
       { label: "Engagement Rate", value: "64%" },
     ],
   },
-  {
+ {
     id: 6,
-    name: "Triveeni Events",
-    img: "/Our_Service/6.png",
-    theme: "bg-green-100 text-black",
+    name: "Adda",
+    img: "/Our_Service/1.png",
+    alt: "uihhlh",
+   theme: "bg-gray-300 text-black",
 
-    description: "Healthcare brand awareness campaign in 2 months.",
+    description:
+      "500,000 Views on Twitter in 3 Months: Influencer Marketing for Betmode’s Gambling Platform",
     stats: [
-      { label: "Consultations", value: "210K" },
-      { label: "Patient Signups", value: "35K" },
-      { label: "Conversion Rate", value: "22%" },
-      { label: "App Reviews", value: "9K" },
+      { label: "Views", value: "517,507" },
+      { label: "Likes", value: "7,701" },
+      { label: "Reposts", value: "2,530" },
+      { label: "Comments", value: "2,343" },
     ],
   },
   {
@@ -228,9 +229,9 @@ const handlers = useSwipeable({
     </div>
 
     {/* Read More Button */}
-    <div className="mt-5 sm:mt-6 items-center">
+    {/* <div className="mt-5 sm:mt-6 items-center">
       <PrimaryButton href={`/work`}>Read More</PrimaryButton>
-    </div>
+    </div> */}
   </div>
 
   {/* Right: Image */}
@@ -246,7 +247,7 @@ const handlers = useSwipeable({
 
         {/* Bottom Navigation */}
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-          <PrimaryButton href="#contact">See More Success Stories</PrimaryButton>
+          {/* <PrimaryButton href="#contact">See More Success Stories</PrimaryButton> */}
 
           <div className="flex gap-2 sm:gap-3">
             {/* Prev */}

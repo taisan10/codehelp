@@ -8,7 +8,7 @@ import {
 
 export default function Hero() {
 
-const logos = Array.from({ length: 20 }, (_, i) => `/Client_Logo/${i + 1}.png`);
+const logos = Array.from({ length: 15 }, (_, i) => `/Client_Logo/${i + 1}.png`);
 
 
   return (

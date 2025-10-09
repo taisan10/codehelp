@@ -126,8 +126,9 @@ export default  function Services() {
     <div className="relative py-14 bg-neutral-950 text-white overflow-hidden">
       <Container>
         <SectionTitle
-          title={<GradientText>Your marketing dream team!</GradientText>}
-          subtitle="Crafted by specialists • Driven by results • Built for your growth"
+          title={<GradientText>What We Do Best
+</GradientText>}
+          subtitle="Tailored marketing strategies across every major platform"
         />
 
         <div className="relative mt-10">
