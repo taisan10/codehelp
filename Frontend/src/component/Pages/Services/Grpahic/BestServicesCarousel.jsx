@@ -4,28 +4,6 @@ import { GradientText, Container, SectionTitle } from "../../../UI/UiComponent";
 export function BestServicesCarousel() {
   const platforms = [
   {
-    name: "Logo Design",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2L2 7v6c0 5.25 3.92 10.74 10 13 6.08-2.26 10-7.75 10-13V7l-10-5z" />
-      </svg>
-    ),
-    description:
-      "Craft unique, memorable logos that define your brand identity and leave a lasting impression.",
-    tags: [
-      "Brand Identity",
-      "Custom Logos",
-      "Minimalist Design",
-      "Creative Concepts",
-      "Typography",
-    ],
-  },
-  {
     name: "Social Media Graphics",
     icon: (
       <svg
@@ -38,13 +16,37 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Eye-catching social media visuals tailored for maximum engagement and consistent branding.",
+      "Engaging visuals crafted to boost interaction, increase reach, and strengthen brand consistency. ",
     tags: [
       "Posts & Stories",
-      "Banners",
-      "Ads Creative",
-      "Brand Consistency",
-      "High Engagement",
+      "Banners & Ads Creative",
+      "Platform-Optimized Designs",
+      "High-Impact Visuals for Maximum Engagement",
+  
+    ],
+  },
+  {
+    name: "Logo Design",
+    icon: (
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-12 w-12 text-yellow-400"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 2L2 7v6c0 5.25 3.92 10.74 10 13 6.08-2.26 10-7.75 10-13V7l-10-5z" />
+      </svg>
+      
+    ),
+    description:
+      "Create distinctive, memorable logos that define your brand and leave a lasting impression.",
+    tags: [
+      "Custom Logo Concepts",
+      "Brand Identity Development",
+      "Minimalist & Modern Designs",
+      "Typography & Visual Storytelling",
+     
     ],
   },
   {
@@ -60,41 +62,19 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Promotional posters and flyers that grab attention and clearly communicate your message.",
+      "Promotional materials designed to capture attention and communicate your message effectively.",
     tags: [
-      "Print Ready",
-      "Creative Layouts",
-      "Event Flyers",
-      "Typography Design",
-      "Bold Visuals",
+      "Print-Ready Layouts",
+      "Event & Marketing Flyers",
+      "Typography-Focused Designs",
+      "Bold & Eye-Catching Visuals",
+   
     ],
   },
   {
-    name: "Business Cards",
+    name: "Brand Identity",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-green-400"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm4 2v2h8V8H6zm0 4v2h6v-2H6z" />
-      </svg>
-    ),
-    description:
-      "Professional and stylish business cards that reflect your brand and make networking impactful.",
-    tags: [
-      "Custom Layouts",
-      "Print-Ready",
-      "Minimalist Cards",
-      "Corporate Branding",
-      "High Resolution",
-    ],
-  },
-  {
-    name: "Infographics",
-    icon: (
-      <svg
+     <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-12 w-12 text-red-400"
         fill="currentColor"
@@ -104,37 +84,39 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Visually engaging infographics to simplify complex data and present information creatively.",
+      "Comprehensive branding solutions that ensure consistency and recognition across all touchpoints. ",
     tags: [
-      "Data Visualization",
-      "Creative Charts",
-      "Educational Design",
-      "Corporate Reports",
-      "Presentation Ready",
+      "Complete Brand Kits",
+      "Color & Typography Guidelines",
+      "Visual Style Development",
+      "Creative Conceptualization",
+  
     ],
   },
   {
-    name: "Packaging Design",
+    name: "Business Cards",
     icon: (
-      <svg
+       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-purple-400"
+        className="h-12 w-12 text-green-400"
         fill="currentColor"
         viewBox="0 0 24 24"
       >
-        <path d="M21 8l-9-5-9 5 9 5 9-5zm-9 7l-9-5v9h18v-9l-9 5z" />
+        <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm4 2v2h8V8H6zm0 4v2h6v-2H6z" />
       </svg>
+      
     ),
     description:
-      "Attractive and functional packaging designs that enhance your product’s shelf appeal.",
+      "Professional, stylish cards that make networking impactful and reflect your brand’s personality.",
     tags: [
-      "Product Packaging",
-      "Custom Boxes",
-      "Labels & Stickers",
-      "Retail Branding",
-      "Premium Look",
+      "Custom Layouts",
+      "Minimalist & Corporate Styles",
+      "Print-Ready High-Resolution Designs",
+      "Consistent Brand Representation",
+    
     ],
   },
+  
 ];
 
 
@@ -167,8 +149,9 @@ export function BestServicesCarousel() {
     <div className="relative py-14 bg-neutral-950 text-white overflow-hidden">
       <Container>
         <SectionTitle
-          title={<GradientText>What We Do Best</GradientText>}
-          subtitle="Tailored marketing strategies across every major platform"
+          title={<GradientText>What We Do Best
+</GradientText>}
+          subtitle="Tailored graphics solutions across every platform to elevate your brand presence. "
         />
 
         <div className="relative mt-10">

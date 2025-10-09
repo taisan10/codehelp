@@ -1,51 +1,51 @@
 import { GradientText, Container, SectionTitle } from "../../../UI/UiComponent";
 
 const helpItems = [
-  {
-    title: "Social media isn’t bringing real business results.",
+
+   {
+    title: "Social media wasn’t delivering measurable results.",
     answer:
-      "You get full visibility into what’s working and why — powered by data, not opinions.",
+      "Bluenose Marketing provides full transparency and data-driven insights, ensuring every strategy is focused on real business outcomes",
   },
   {
-    title: "We don’t know what works and what doesn’t.",
+    title: "Uncertainty around which campaigns converted",
     answer:
-      "Every campaign is backed by analytics and weekly reporting — so you always know what drives impact.",
+      "Every campaign is supported by analytics and detailed reporting, so clients always know what drives impact.",
   },
   {
-    title: "We’re active on social, but no one’s really engaging.",
+    title: "Low engagement despite consistent posting.",
     answer:
-      "We create platform-specific content that sparks conversations and builds loyal communities around your brand.",
+      "Bluenose Marketing creates platform-specific content that encourages interaction and builds loyal, active communities.",
   },
   {
-    title: "We don’t have the time or expertise to manage social properly.",
+    title: "Limited time or expertise to manage social media effectively.",
     answer:
-      "We handle everything — strategy, content, scheduling, ads, and reports — so your team can focus on what they do best.",
+      "Bluenose Marketing manages end-to-end social media operations — strategy, content, scheduling, advertising, and reporting — allowing clients to focus on core business activities.",
   },
   {
-    title: "Our brand looks different across every channel.",
+    title: "Inconsistent brand presence across channels.",
     answer:
-      "We ensure brand consistency across all platforms — visually and tonally — for a seamless, recognizable presence.",
+      "Bluenose Marketing ensures visual and tonal consistency across all platforms, delivering a cohesive and recognizable brand experience.",
   },
   {
-    title: "We’ve worked with agencies before — and got generic solutions.",
+    title: "Generic solutions from previous agencies. ",
     answer:
-      "Everything we do is tailored — your industry, your audience, your goals. No templates. Just custom strategy and execution.",
+      "Bluenose Marketing delivers fully customized strategies tailored to each client’s industry, audience, and objectives.",
   },
   {
-    title: "We’re growing fast and need scalable support.",
+    title: "Rapid business growth requiring scalable support.",
     answer:
-      "Our flexible monthly plans and dedicated teams are built to grow with you — from startup to enterprise.",
+      "Bluenose Marketing provides flexible plans and dedicated teams that scale alongside clients’ growth.",
   },
   {
-    title: "We’re in a complex niche — it’s hard to find experts who get it.",
+    title: "Operating in complex or niche industries. ",
     answer:
-      "From crypto to fintech to SaaS, we’ve helped global leaders stand out in competitive, regulated industries.",
+      " Bluenose Marketing has experience helping clients in competitive and regulated sectors, including fintech, SaaS, and technology, stand out effectively. ",
   },
   {
-    title:
-      "We don’t know which channels to focus on — and it feels overwhelming.",
+    title: "Uncertainty about which platforms to prioritize. ",
     answer:
-      "We help you identify the right platforms based on your audience and business goals — so every post, ad, and dollar goes where it matters most.",
+      "Bluenose Marketing identifies the most effective channels based on audience and business goals, optimizing every post, ad, and budget allocation. ",
   },
 ];
 
@@ -57,8 +57,8 @@ export function ChallengesSection() {
         <SectionTitle
           title={
             <>
-              Challenges Our Clients Faced <br />
-              <GradientText>Before Working With Us</GradientText>
+              Barriers to Success Before <br />
+              <GradientText> Working With Us</GradientText>
             </>
           }
         />

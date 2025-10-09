@@ -6,49 +6,49 @@ import {GradientText,Container,SectionTitle} from  "../../../UI/UiComponent"
 
 const helpItems = [
   {
-    title: "Our videos don’t look professional.",
+    title: "Our videos didn’t look professional or engaging.",
     answer:
-      "We use industry-standard editing, color grading, and transitions to give your videos a polished, cinematic feel.",
+      "Bluenose Marketing uses advanced editing tools, professional color grading, and seamless transitions to deliver cinematic-quality videos that elevate your brand presence.",
   },
   {
-    title: "It takes us too long to edit content in-house.",
+    title: "Editing videos in-house took too long.",
     answer:
-      "We handle the entire editing process — fast turnaround, consistent quality, and ready-to-publish videos.",
+      " Our video editing team manages the entire process, from cutting to final polish, ensuring fast turnaround times and consistent, high-quality results.",
   },
   {
-    title: "Our videos don’t grab attention on social media.",
+    title: "Our videos weren’t performing well on social media.",
     answer:
-      "We craft engaging intros, dynamic cuts, and on-trend formats that boost retention and engagement.",
+      "We create platform-optimized videos with attention-grabbing hooks, dynamic pacing, and trending styles that improve engagement and viewer retention.",
   },
   {
-    title: "We don’t know what style of videos works best for our brand.",
+    title: "We weren’t sure what type of video content fits our brand.",
     answer:
-      "From short-form reels to long-form storytelling, we help you define a style that matches your brand identity and audience.",
+      "From short-form reels to detailed brand films, we help businesses define the perfect video style aligned with their goals and audience preferences. ",
   },
   {
-    title: "Our raw footage feels boring and unpolished.",
+    title: "Our raw footage lacked energy and creativity. ",
     answer:
-      "We enhance your footage with animations, text overlays, background music, and effects to make it stand out.",
+      "We enhance every clip with on-brand animations, smooth transitions, professional sound design, and text overlays, turning simple footage into powerful visual stories.",
   },
   {
-    title: "We need videos optimized for multiple platforms.",
+    title: "We needed videos optimized for multiple platforms. ",
     answer:
-      "We create platform-specific versions (YouTube, Instagram, TikTok, LinkedIn) — each tailored to perform better where it’s published.",
+      "Bluenose Marketing produces channel-specific edits for YouTube, Instagram, TikTok, and LinkedIn,  each crafted to perform at its best on that platform.",
   },
   {
-    title: "We’ve tried freelancers before, but quality was inconsistent.",
+    title: "Freelancers didn’t deliver consistent results.",
     answer:
-      "We provide a dedicated team and streamlined workflow, so you get consistent quality and style across all your videos.",
+      "Our dedicated video editing team ensures brand consistency, reliability, and top-tier quality across all projects, without the hassle of managing freelancers.",
   },
   {
-    title: "We don’t have a clear process for repurposing content.",
+    title: "We had no process for repurposing long videos.",
     answer:
-      "We turn long videos into multiple short clips, trailers, and teasers — maximizing your content ROI.",
+      "We transform your existing content into short clips, teasers, and highlight reels, maximizing visibility and content ROI across every channel.",
   },
   {
-    title: "We want our brand storytelling to be stronger.",
+    title: "Our storytelling lacked emotional impact.",
     answer:
-      "We structure your videos with a clear narrative arc, strong visuals, and emotional impact — driving deeper connections.",
+      "We craft videos with strong narrative flow, cinematic visuals, and emotional depth that connect authentically with your audience and build brand trust.",
   },
 ];
 
@@ -61,8 +61,8 @@ export function ChallengesSection() {
         <SectionTitle
           title={
             <>
-              Challenges Our Clients Faced <br />
-              <GradientText>Before Working With Us</GradientText>
+              Common Challenges Our <br />
+              <GradientText>Clients Encountered</GradientText>
             </>
           }
         />

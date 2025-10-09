@@ -1,13 +1,11 @@
 
-
-
 import { useState, useEffect } from "react";
 import { GradientText, Container, SectionTitle } from "../../UI/UiComponent";
 
 export default  function Services() {
   const platforms = [
   {
-    name: "Social Media",
+    name: "	Social Media Handling",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +23,11 @@ export default  function Services() {
       </svg>
     ),
     description:
-      "Build and manage your online presence across all major platforms. Create content that connects, engages, and converts.",
-    tags: ["Content Creation", "Community Growth", "Reels & Shorts", "Brand Voice"],
+      "End-to-end management that grows communities and builds engagement. Strategy, content, and analytics, all working for results.",
+    tags: ["Content Planning & Scheduling", "Social Ads & Campaigns", "Engagement & Community Growth", "Analytics & Performance Reporting"],
   },
   {
-    name: "Graphic Design",
+    name: "Graphic Designing",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +45,8 @@ export default  function Services() {
       </svg>
     ),
     description:
-      "Creative visuals, branding, and UI/UX design that grab attention and represent your brand identity.",
-    tags: ["Brand Identity", "Logo Design", "UI/UX", "Marketing Creatives"],
+      "Visuals that communicate, persuade, and elevate your brand. From concepts to execution, every design is crafted to convert",
+    tags: ["Branding & Identity Design", "Social Media Creatives", "Infographics & Illustrations", "Marketing Collaterals"],
   },
   {
     name: "Video Editing",
@@ -69,75 +67,34 @@ export default  function Services() {
       </svg>
     ),
     description:
-      "Professional editing for YouTube, ads, reels, and storytelling content to maximize engagement.",
-    tags: ["Reels Editing", "YouTube Videos", "Ad Videos", "Motion Graphics"],
+      "Cuts, transitions, and motion that captivate. Transform raw footage into engaging stories that drive views, shares, and conversions.",
+    tags: ["Promotional Videos", "Social Reels & Shorts", "Product & Demo Videos", "Post-Production & Color Grading"],
   },
+  
   {
-    name: "SMM",
+    name: "Videography",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-green-400"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M7 8h10M7 16h10M5 12h14M12 4v16"
-        />
-      </svg>
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  className="h-12 w-12 text-yellow-400"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"
+/>
+</svg>
+
     ),
     description:
-      "Social Media Marketing strategies designed to boost reach, engagement, and conversions with data-driven campaigns.",
-    tags: ["Paid Ads", "Campaign Strategy", "Analytics", "Engagement Boost"],
+      "Capture stories that resonate. From concept to final cut, produce cinematic-quality videos that engage and convert.",
+    tags: [" Product Shoots", " Event Coverage", "Reels", " Cinematic Edits"],
   },
-  {
-    name: "Personal Branding",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-yellow-400"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z"
-        />
-      </svg>
-    ),
-    description:
-      "Craft a powerful personal brand with the right voice, visuals, and consistent online presence.",
-    tags: ["Thought Leadership", "Content Strategy", "Profile Design", "Reputation Growth"],
-  },
-  {
-    name: "Influencer Marketing",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-purple-500"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 4v1m0 14v1m8-8h1M4 12H3m15.364-7.364l.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707"
-        />
-      </svg>
-    ),
-    description:
-      "Leverage influencer collaborations to expand reach, build credibility, and drive conversions.",
-    tags: ["Collabs", "Campaign Management", "Brand Partnerships", "Audience Targeting"],
-  },
+ 
 ];
 
   const [index, setIndex] = useState(0);
@@ -169,8 +126,8 @@ export default  function Services() {
     <div className="relative py-14 bg-neutral-950 text-white overflow-hidden">
       <Container>
         <SectionTitle
-          title={<GradientText>What We Do Best</GradientText>}
-          subtitle="Tailored marketing strategies across every major platform"
+          title={<GradientText>Your marketing dream team!</GradientText>}
+          subtitle="Crafted by specialists • Driven by results • Built for your growth"
         />
 
         <div className="relative mt-10">

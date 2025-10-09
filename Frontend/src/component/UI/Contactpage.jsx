@@ -65,18 +65,20 @@ export default function ContactPage() {
                  <Container className="grid gap-8 sm:gap-12 md:grid-cols-2 items-start">
                    <div>
                      <h3 className="text-3xl sm:text-4xl font-semibold leading-tight mb-4 sm:mb-6">
-                       Ready to take your marketing to the next level?
+                      Ready to Elevate Your Marketing?
                      </h3>
                      <ul className="space-y-2 sm:space-y-3 text-white/80 text-base sm:text-lg">
-                       <li>• How Bluenose works</li>
+                       <li>•How does the Bluenose agency work for your brand?
+</li>
                        <li>
-                         • How you can do marketing at scale better, faster and cheaper
+                         • How can you do marketing at scale better, faster and cheaper?
                        </li>
                        <li>
-                         • How we’re different from agencies, freelancers and in‑house
-                         teams(hint: faster & leaner!)
+                         • How we’re different from agencies, freelancers and in‑house teams(hint: faster & leaner!)
+
                        </li>
-                       <li>• The most suitable subscription plan for your needs</li>
+                       <li>• Which subscription plan fits your growth goals?
+</li>
                      </ul>
                      {/* <LogoRow /> */}
                    </div>
@@ -141,7 +143,7 @@ export default function ContactPage() {
         disabled={loading}
         className="rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-6 py-3 text-sm font-medium text-white shadow-lg disabled:opacity-50"
       >
-        {loading ? "Submitting..." : "Book a demo"}
+        {loading ? "Submitting..." : "Book a call"}
       </button>
     </form>
                    </div>

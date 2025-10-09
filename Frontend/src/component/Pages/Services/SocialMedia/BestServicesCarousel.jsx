@@ -15,14 +15,14 @@ export function BestServicesCarousel() {
         </svg>
       ),
       description:
-        "Meta marketing done right — from targeted campaigns to community growth and high-converting funnels.",
+        "Meta marketing campaigns that build communities, drive engagement, and convert audiences into customers.",
       tags: [
-        "Audience Targeting",
-        "Community Building",
-        "Paid Campaigns",
-        "Funnel Strategy",
+        "Advanced Audience Targeting",
+        "Community Engagement",
+        "Paid Advertising",
+        "Full-Funnel Strategy",
         "Content Planning",
-        "Retargeting Ads",
+        "Retargeting Campaigns",
         "Lead Generation",
       ],
     },
@@ -38,14 +38,14 @@ export function BestServicesCarousel() {
         </svg>
       ),
       description:
-        "Stunning visuals, reels, and influencer collaboration. Build a loyal brand following on IG.",
+        "Captivating visuals, reels, and influencer collaborations that grow loyal audiences and strengthen your brand presence.",
       tags: [
         "Visual Branding",
         "Stories & Reels",
-        "Hashtag Strategy",
-        "Influencer Collabs",
-        "Ad Creative",
-        "Audience Growth",
+        "Hashtag Optimization",
+        "Influencer Collaborations",
+        "High-Impact Ads",
+        "Organic Audience Growth",
       ],
     },
     {
@@ -60,37 +60,17 @@ export function BestServicesCarousel() {
         </svg>
       ),
       description:
-        "Build authority and pipeline. From thought leadership content to full-funnel B2B ads.",
+        "Professional, results-driven campaigns that establish authority, generate B2B leads, and expand your network. ",
       tags: [
-        "B2B Strategy",
-        "Thought Leadership",
+        "Profile & Page Optimization",
         "LinkedIn Ads",
-        "DM Campaigns",
-        "Lead Gen Funnels",
-        "Profile Optimization",
+        "Thought Leadership Content",
+        "Audience Engagement",
+        "Lead Generation",
+        "Analytics & Reporting",
       ],
     },
-    {
-      name: "Twitter (X)",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 fill-white"
-          viewBox="0 0 24 24"
-        >
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.19l-5.214-6.822-5.97 6.822H1.697l7.73-8.832L1.25 2.25h7.926l4.713 6.231z" />
-        </svg>
-      ),
-      description:
-        "Engage in real-time conversations and trends. Perfect for brand voice and viral campaigns.",
-      tags: [
-        "Hashtag Trends",
-        "Brand Voice",
-        "Engagement",
-        "Viral Content",
-        "Community Growth",
-      ],
-    },
+    
     {
       name: "YouTube",
       icon: (
@@ -103,13 +83,14 @@ export function BestServicesCarousel() {
         </svg>
       ),
       description:
-        "Video content powerhouse — tutorials, ads, and storytelling to captivate audiences.",
+        "Video marketing strategies that educate, entertain, and convert viewers into loyal customers. ",
       tags: [
-        "Video Ads",
-        "Content Strategy",
-        "SEO for Videos",
-        "Community Building",
-        "Monetization",
+        "Content Strategy & Planning",
+        "YouTube Ads",
+        "Video SEO Optimization",
+        "Audience Retention Optimization",
+        "Channel Growth",
+        "Analytics & Performance Tracking",
       ],
     },
     {
@@ -124,13 +105,14 @@ export function BestServicesCarousel() {
         </svg>
       ),
       description:
-        "Short-form video domination. Go viral with trends, challenges, and influencer marketing.",
+        "Creative, short-form content that captures attention, boosts engagement, and increases brand awareness.",
       tags: [
-        "Trendy Content",
-        "Influencer Collabs",
-        "Music Integration",
-        "Ad Campaigns",
-        "Audience Growth",
+        "Trend-Driven Content",
+        "Hashtag & Challenge Strategy",
+        "Influencer Partnerships",
+        "Viral Campaign Planning",
+"Paid Ads",
+        "Audience Insights",
       ],
     },
   ];
@@ -164,8 +146,8 @@ export function BestServicesCarousel() {
     <div className="relative py-14 bg-neutral-950 text-white overflow-hidden">
       <Container>
         <SectionTitle
-          title={<GradientText>What We Do Best</GradientText>}
-          subtitle="Tailored marketing strategies across every major platform"
+          title={<GradientText>What Sets Us Apart</GradientText>}
+          subtitle="Creative, data-driven social media campaigns for all platforms."
         />
 
         <div className="relative mt-10">

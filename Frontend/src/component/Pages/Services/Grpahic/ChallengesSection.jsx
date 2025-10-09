@@ -5,51 +5,53 @@ import {GradientText,Container,SectionTitle} from  "../../../UI/UiComponent"
 
 
 const helpItems = [
-  {
-    title: "Our brand visuals look inconsistent across platforms.",
+   {
+    title: "Our visuals don’t feel consistent across channels. ",
     answer:
-      "We create a unified brand identity — from colors to typography to layouts — so every design looks cohesive and professional.",
+      " We craft cohesive graphics across social media, web, and print so your brand looks polished and professional everywhere. ",
   },
   {
-    title: "Our marketing materials don’t stand out.",
+    title: "Our marketing visuals fail to grab attention. ",
     answer:
-      "We craft eye-catching designs that are not only beautiful but also optimized to grab attention and drive action.",
+      " We design bold, memorable graphics that capture your audience’s eye and drive engagement. ",
   },
   {
-    title: "We don’t have a strong brand identity yet.",
+    title: "We don’t have a clear graphic identity. ",
     answer:
-      "We design complete brand kits — logos, style guides, and templates — that make your business instantly recognizable.",
+      " We develop complete brand graphic kits — logos, color schemes, and templates, that make your business instantly recognizable. ",
   },
   {
-    title: "Our presentations and pitch decks look boring.",
+    title: "Presentations and decks look dull.",
     answer:
-      "We transform your slides into engaging, visually impactful stories that impress clients and investors.",
+      "We turn slides into visually engaging graphics that tell your story and impress stakeholders.",
   },
   {
-    title: "Designing takes too much time for our in-house team.",
+    title: "Creating graphics takes too much time internally. ",
     answer:
-      "We provide fast, high-quality design support so your team can focus on strategy while we handle the visuals.",
+      " Our team delivers fast, high-quality visuals so your staff can focus on strategy and growth. ",
   },
   {
-    title: "We need graphics optimized for multiple platforms.",
+    title: "Our graphics aren’t optimized for every platform. ",
     answer:
-      "We design platform-specific creatives — Instagram, LinkedIn, websites, print — ensuring perfect fit and performance everywhere.",
+      "We produce platform-specific visuals ,from Instagram posts to LinkedIn banners, that fit perfectly and perform effectively. ",
   },
   {
-    title: "We’ve worked with freelancers before, but the designs felt generic.",
+    title: "Previous designers delivered generic results. ",
     answer:
-      "Every design we create is custom-tailored to your brand, audience, and goals — no cookie-cutter templates.",
+      " Every graphic we create is tailored to your brand, audience, and objectives, no stock templates.",
   },
   {
-    title: "We struggle to communicate complex ideas visually.",
+    title: "We struggle to show complex ideas visually. ",
     answer:
-      "We specialize in infographics, data visualization, and storytelling design to simplify even the most technical concepts.",
+      "We create infographics, charts, and visual storytelling graphics that make even technical concepts clear and engaging. ",
   },
   {
-    title: "Our brand doesn’t feel premium enough.",
+    title:
+      "Our brand visuals don’t feel premium. ",
     answer:
-      "Through modern layouts, bold visuals, and polished details, we elevate your brand perception to premium level.",
+      " With modern layouts, sophisticated designs, and attention to detail, we elevate your brand’s visual presence. ",
   },
+
 ];
 
 export function ChallengesSection() {
@@ -60,8 +62,9 @@ export function ChallengesSection() {
         <SectionTitle
           title={
             <>
-              Challenges Our Clients Faced <br />
-              <GradientText>Before Working With Us</GradientText>
+              Challenges Our Clients Faced Before  <br />
+              <GradientText>Working With Us
+</GradientText>
             </>
           }
         />

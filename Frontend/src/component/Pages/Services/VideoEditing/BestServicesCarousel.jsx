@@ -15,18 +15,18 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Professional editing services for films, ads, and social media. Smooth transitions and stunning visuals.",
+      "Professional editing for brand films, ads, and digital campaigns, delivering seamless transitions, clean storytelling, and visually striking results. ",
     tags: [
       "Cutting & Trimming",
-      "Transitions",
+      "Transitions & Effects",
       "Color Correction",
-      "Motion Graphics",
       "Text Animations",
-      "Sound Sync",
+      "Color Correction",
+      "Visual Enhancement",
     ],
   },
   {
-    name: "Color Grading",
+    name: "Talking Head Videos",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -37,17 +37,17 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Bring cinematic feel to your videos with advanced LUTs, tone adjustments, and creative grading.",
+      "Professional, polished edits for interviews, podcasts, and brand storytelling.",
     tags: [
-      "LUTs",
-      "Cinematic Tones",
-      "HDR Balance",
-      "Skin Retouching",
-      "Color Balance",
+      "Clean Jump Cuts",
+      "Lower Thirds & Titles",
+      "Background Cleanup",
+      "Multi-Camera Sync",
+      "Sound & Light Balance",
     ],
   },
   {
-    name: "Motion Graphics",
+    name: "UGC & Product Videos",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -58,17 +58,17 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Dynamic motion graphics and animations for intros, ads, and engaging social media reels.",
+      "Fun, creative, and trending UGC-style edits that feel real, connect instantly, and convert fast.",
     tags: [
-      "Logo Animation",
-      "Kinetic Typography",
-      "Infographics",
-      "Lower Thirds",
-      "Animated Ads",
+      "Authentic User-Style Videos",
+      "Product Demos & Testimonials",
+      "Trend-Based Edits",
+      "Lifestyle & Aesthetic Reels",
+      "High-Engagement Ad Creatives",
     ],
   },
   {
-    name: "VFX & Visuals",
+    name: "VFX & Visual Enhancements",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,13 +79,13 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "High-quality VFX for films, advertisements, and creative storytelling projects.",
+      "Bring your visuals to life with next-level effects that boost storytelling and impact.",
     tags: [
-      "Green Screen",
+      "Green Screen Keying",
       "Compositing",
-      "Particles",
-      "Special Effects",
+      "Particle Effects",
       "3D Integration",
+      "Cinematic Enhancements",
     ],
   },
   {
@@ -100,13 +100,13 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Enhance your videos with perfect background music, sound effects, and audio mixing.",
+      "Audio that amplifies your message: mixed, balanced, and emotionally engaging.",
     tags: [
-      "Audio Sync",
-      "Sound FX",
-      "Background Music",
+      "Audio Syncing",
+      "Sound FX & Foley",
       "Voice Overs",
-      "Mix & Master",
+      "Background Music",
+      "Mixing & Mastering",
     ],
   },
   {
@@ -121,13 +121,13 @@ export function BestServicesCarousel() {
       </svg>
     ),
     description:
-      "Quick, trendy, and engaging edits tailored for platforms like Instagram, TikTok, and YouTube Shorts.",
+      "Quick, trendy, and platform-optimized edits designed for maximum engagement.",
     tags: [
       "Reels & Shorts",
-      "Trending Styles",
-      "Fast Cuts",
-      "Text Overlays",
-      "Platform Ready",
+      "Trending Transitions",
+      "Text & Subtitle Overlays",
+      "Vertical & Square Formats",
+      "Platform-Specific Cuts",
     ],
   },
 ];
@@ -162,7 +162,7 @@ export function BestServicesCarousel() {
       <Container>
         <SectionTitle
           title={<GradientText>What We Do Best</GradientText>}
-          subtitle="Tailored marketing strategies across every major platform"
+          subtitle="Creative video editing and post-production services that turn raw footage into high-performing visual stories."
         />
 
         <div className="relative mt-10">

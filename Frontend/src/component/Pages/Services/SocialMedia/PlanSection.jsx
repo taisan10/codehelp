@@ -77,8 +77,8 @@ export function PlanSection() {
       <Container>
      {/* Heading */}
 <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-center mb-6 md:mb-12 leading-snug md:leading-tight px-4">
-  Select your plan. You can change it <br className="hidden sm:block" />
-  <GradientText>whenever you need to</GradientText>
+ Your Plan, Your Way <br className="hidden sm:block" />
+  <GradientText>Flexible options that grow with your business.</GradientText>
 </h2>
 
 

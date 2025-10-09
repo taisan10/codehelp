@@ -12,7 +12,8 @@ export default function Kpi(){
     <section className="py-12 sm:py-16">
               <Container>
                 <SectionTitle
-                  title={<>Meet the new generation of <GradientText>digital marketing services</GradientText> </>}
+                  title={<>The Next Era of Marketing, <GradientText>Designed for Growth
+</GradientText> </>}
                 />
                 <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-[50%_50%] lg:grid-cols-[24%_24%_48%] ">
                   <Stat
