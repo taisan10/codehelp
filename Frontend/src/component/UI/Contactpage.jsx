@@ -1,28 +1,26 @@
-import { Container, } from "../UI/UiComponent"
+import { Container } from "../UI/UiComponent";
 import { useState } from "react";
 
 export default function ContactPage() {
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
+    phoneCode: "+91",
     phone: "",
     message: "",
   });
 
-  const [status, setStatus] = useState(""); // success or error message
+  const [status, setStatus] = useState(""); // success/error message
   const [loading, setLoading] = useState(false);
 
-  // Input change handler
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // Form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.firstName || !formData.email || !formData.message) {
       setStatus("Please fill in all required fields.");
       return;
@@ -32,7 +30,7 @@ export default function ContactPage() {
     setStatus("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -46,6 +44,7 @@ export default function ContactPage() {
           firstName: "",
           lastName: "",
           email: "",
+          phoneCode: "+91",
           phone: "",
           message: "",
         });

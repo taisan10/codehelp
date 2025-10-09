@@ -1,5 +1,5 @@
 import ContactPage from "../../../UI/Contactpage";
-import Team from "../../../UI/Team";
+
 import Hero from "../Hero";
 import Kpi from "../Kpi";
 import Work from "../OurWork";
@@ -17,9 +17,9 @@ export default function Home(){
           <Hero />
           <Video />
           <Kpi />
-          <Services />
           <Work />
-          <Team />
+          <Services />
+      
           <ContactPage />
           </>
           
