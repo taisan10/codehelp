@@ -58,7 +58,7 @@ const HeroSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            src="/Client_Logo/6.png"
+            src="/Client_Logo/4.png"
             alt="Betmode Honeymoon Promo"
             className="max-w-xs md:max-w-md rounded-lg"
           ></motion.img>
