@@ -7,6 +7,8 @@ import Company from "./component/Pages/Company";
 import Contact from "./component/Pages/Contact";
 // import WorkDetail from "./component/Pages/Home/WorkDetail";
 
+import { Works } from "./component/Pages/WorksRoutes";
+
 
 // ✅ Service Routes import
 import { ServiceRoutes } from "./component/Pages/Services/ServiceRoutes";
@@ -22,8 +24,11 @@ export default function App() {
           {ServiceRoutes.map(({ path, element }) => (
             <Route key={path} path={path} element={element} />
           ))}
+          {Works.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
 
-          <Route path="/work" element={<Work />} />
+          {/* <Route path="/work" element={<Work />} /> */}
           {/* <Route path="/work/:id" element={<WorkDetail />} /> */}
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />

@@ -1,54 +1,61 @@
+
+
 import { useState, useRef, useEffect } from "react";
-import { Container, Logo, PrimaryButton } from "../UI/UiComponent";
-import { MobileNav } from "../UI/UiComponent";
+import { Container, Logo, PrimaryButton, MobileNav } from "../UI/UiComponent";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(null);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(0);
+  let timeoutId = useRef(null);
 
   const navItems = [
     { label: "Home", href: "/" },
     {
       label: "Services",
       children: [
-        { label: "SocialMedia", href: "/Services/Social-Media" },
+        { label: "Social Media", href: "/services/social-media" },
         { label: "Graphic Designing", href: "/services/graphic-designing" },
         { label: "Video Editing", href: "/services/video-editing" },
       ],
     },
-    { label: "Work", href: "/work" },
+    {
+      label: "Work",
+      children: [
+        { label: "Triveeni Events", href: "/Work/Triveeni Events" },
+        { label: "BB_Station", href: "/Work/BB_Station" },
+        { label: "Nayya", href: "/Work/Nayya" },
+      ],
+    },
+    // { label: "Work", href: "/work" },
     { label: "Company", href: "/company" },
   ];
-const [showNavbar, setShowNavbar] = useState(true);
-const lastScrollY = useRef(0);
 
-useEffect(() => {
-  function handleScroll() {
-    if (window.scrollY > lastScrollY.current) {
-      // 👇 user scrolls down → hide navbar
-      setShowNavbar(false);
-    } else {
-      // 👇 user scrolls up → show navbar
-      setShowNavbar(true);
-    }
-    lastScrollY.current = window.scrollY;
-  }
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
-  // 👇 Close dropdown when clicking outside
+  // 🟢 Scroll Hide Navbar
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpenDropdown(false);
+    function handleScroll() {
+      if (window.scrollY > lastScrollY.current) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
       }
+      lastScrollY.current = window.scrollY;
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // 🟡 Hover Handlers with Delay (Smooth)
+  const handleMouseEnter = (label) => {
+    clearTimeout(timeoutId.current);
+    setIsHovered(label);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutId.current = setTimeout(() => setIsHovered(null), 200);
+  };
 
   return (
     <header
@@ -64,24 +71,22 @@ useEffect(() => {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 text-black">
+          <nav className="hidden md:flex items-center gap-6 text-black relative">
             {navItems.map((item) =>
               item.children ? (
                 <div
                   key={item.label}
                   className="relative text-lg"
-                  ref={dropdownRef}
+                  onMouseEnter={() => handleMouseEnter(item.label)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <button
-                    type="button"
-                    onClick={() => setOpenDropdown(!openDropdown)}
-                    className="hover:text-sky-500 transition"
-                  >
+                  <button className="hover:text-sky-500 transition flex items-center gap-1">
                     {item.label}
+                   
                   </button>
 
-                  {openDropdown && (
-                    <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg p-2 w-52">
+                  {isHovered === item.label && (
+                    <div className="absolute left-0 mt-1 bg-white shadow-lg rounded-lg p-2 w-52 z-50">
                       {item.children.map((child) => (
                         <a
                           key={child.label}
@@ -98,7 +103,7 @@ useEffect(() => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="hover:text-sky-500 transition"
+                  className="hover:text-sky-500 transition text-lg"
                 >
                   {item.label}
                 </a>
@@ -112,7 +117,7 @@ useEffect(() => {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex items-center gap-2  md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
             <PrimaryButton href="#contact">Contact Us</PrimaryButton>
             <button
               aria-label="Open menu"

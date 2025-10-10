@@ -6,7 +6,7 @@ export default function ContactPage() {
     firstName: "",
     lastName: "",
     email: "",
-    phoneCode: "+91",
+    phoneCode: ["+91","+1","+44"],
     phone: "",
     message: "",
   });
@@ -44,7 +44,7 @@ export default function ContactPage() {
           firstName: "",
           lastName: "",
           email: "",
-          phoneCode: "+91",
+          phoneCode: ["+91","+1","+44"],
           phone: "",
           message: "",
         });
@@ -115,20 +115,26 @@ export default function ContactPage() {
         required
       />
 
-      <div className="flex gap-2">
-        <select className="w-24 rounded-xl border border-neutral-200 bg-white px-3 py-3 text-sm">
-          <option>+1</option>
-          <option>+44</option>
-          <option>+91</option>
-        </select>
-        <input
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="Phone (optional)"
-          className="flex-1 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm"
-        />
-      </div>
+     <div className="flex gap-2">
+  <select
+    name="phoneCode"
+    value={formData.phoneCode}
+    onChange={handleChange}
+    className="w-24 rounded-xl border border-neutral-200 bg-white px-3 py-3 text-sm"
+  >
+    <option value="+44">+44</option>
+    <option value="+1">+1</option>
+    <option value="+91">+91</option>
+  </select>
+
+  <input
+    name="phone"
+    value={formData.phone}
+    onChange={handleChange}
+    placeholder="Phone (optional)"
+    className="flex-1 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm"
+  />
+</div>
 
       <textarea
         name="message"
@@ -151,3 +157,5 @@ export default function ContactPage() {
                </section>
   )
 }
+
+

@@ -20,20 +20,21 @@ const worksData = [
       { label: "Organic Reach", value: "89%" },
     ],
   },
-  
-  {
+   {
     id: 2,
-    name: "Desi_Garden",
-    img: "/Our_Service/2.png",
-    theme: "bg-green-200 text-black",
-    description: "Fintech Corp drove massive user deposits through campaigns.",
+    name: "BB_Station",
+    img: "/Our_Service/8.png",
+    theme: "bg-blue-300 text-black",
+
+    description: "ForexWorld boosted lead generation via campaigns.",
     stats: [
-      { label: "Deposits", value: "20M" },
-      { label: "Conversion Rate", value: "16.8%" },
-      { label: "Engagement Reels", value: "30%" },
-      { label: "PR Reach", value: "1.5M" },
+    { label: "Total Views", value: "79K+" },
+      { label: "Accounts Reached", value: "48K+" },
+      { label: "Followers (Stable Base)", value: "3.9k" },
+      { label: "Total Interactions", value: "439" },
     ],
   },
+ 
   {
     id: 3,
     name: "Nayya",
@@ -42,10 +43,10 @@ theme: "bg-yellow-50 text-black",
 
     description: "Boosted E-commerce sales with influencer marketing.",
     stats: [
-      { label: "Orders", value: "120K" },
-      { label: "Revenue Growth", value: "45%" },
-      { label: "Repeat Buyers", value: "18K" },
-      { label: "Social Shares", value: "32K" },
+       { label: "Total Views(90 days)", value: "3.6M+" },
+      { label: " Followers (+755 Growth)", value: "2.7K+" },
+      { label: "New Followers (90 Days)", value: "755" },
+      { label: "Total Interactions", value: "45.4K" },
     ],
   },
   {
@@ -108,16 +109,15 @@ theme: "bg-yellow-50 text-black",
   },
   {
     id: 8,
-    name: "BB_Station",
-    img: "/Our_Service/8.png",
-    theme: "bg-blue-300 text-black",
-
-    description: "ForexWorld boosted lead generation via campaigns.",
+    name: "Desi_Garden",
+    img: "/Our_Service/2.png",
+    theme: "bg-green-200 text-black",
+    description: "Fintech Corp drove massive user deposits through campaigns.",
     stats: [
-      { label: "Leads Generated", value: "145K" },
-      { label: "Conversion Rate", value: "11.5%" },
-      { label: "Trader Signups", value: "42K" },
-      { label: "Engagement", value: "27%" },
+      { label: "Deposits", value: "20M" },
+      { label: "Conversion Rate", value: "16.8%" },
+      { label: "Engagement Reels", value: "30%" },
+      { label: "PR Reach", value: "1.5M" },
     ],
   },
   {
@@ -229,9 +229,9 @@ const handlers = useSwipeable({
     </div>
 
     {/* Read More Button */}
-    {/* <div className="mt-5 sm:mt-6 items-center">
-      <PrimaryButton href={`/work`}>Read More</PrimaryButton>
-    </div> */}
+    <div className="mt-5 sm:mt-6 items-center">
+      <PrimaryButton href={`/Work/Triveeni Events`}>Read More</PrimaryButton>
+    </div>
   </div>
 
   {/* Right: Image */}

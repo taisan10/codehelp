@@ -6,7 +6,7 @@ import {GradientText,Container,PrimaryButton,LogoCarousel} from  "../../../UI/Ui
 export function HeroSection() {
 
   
-const logos = Array.from({ length: 20 }, (_, i) => `/Client_Logo/${i + 1}.png`);
+const logos = Array.from({ length: 15 }, (_, i) => `/Client_Logo/${i + 1}.png`);
 
   
     return (
