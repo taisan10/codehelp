@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 py-10  text-white">
       <Container className="grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Column 1: Logo + Contact + Social */}
-        <div className="space-y-">
+        <div className="space-y-2">
           {/* < Logo /> */}
 
           {/* Contact Info */}
@@ -15,6 +15,9 @@ export default function Footer() {
             </a>
             <p>+91 72319 20002</p>
             <p>+1 (902) 448-5080</p>
+            <a href="mailto:sales@bluenosemarketing.com" target="_blank" rel="noopener noreferrer">
+              sales@bluenosemarketing.com
+            </a>
           </div>
 
           {/* Social Icons with SVG */}
@@ -53,7 +56,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/bluenose_marketing?utm_source=ig_web_button_share_sheet&igsh=dGFyenhtd25jN3Ix"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Instagram"
@@ -89,7 +92,7 @@ export default function Footer() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/bluenose-marketing-digital-marketing-agency/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -141,57 +144,54 @@ export default function Footer() {
 
         {/* Column 3: Industries */}
         <div>
-          <h4 className="font-semibold mb-4">Industries</h4>
+          <h4 className="font-semibold mb-4">Our Clients</h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li>
-              <a href="/industries/b2b">B2B</a>
+              <a href="/industries/b2b">Triveeni Events</a>
             </li>
             <li>
-              <a href="/industries/b2c">B2C</a>
+              <a href="/industries/b2c">Beaver Bank Station Bar & Grill
+</a>
             </li>
             <li>
-              <a href="/industries/saas">SaaS</a>
+              <a href="/industries/saas">Nayya Pizza & Grill</a>
             </li>
             <li>
-              <a href="/industries/fintech">Fintech</a>
+              <a href="/industries/fintech">Adda Indian Eatery
+</a>
             </li>
             <li>
-              <a href="/industries/ecommerce">Ecommerce</a>
+              <a href="/industries/ecommerce">Pita Nutso</a>
             </li>
             <li>
-              <a href="/industries/crypto">Crypto</a>
+              <a href="/industries/crypto">Sake Cafe</a>
             </li>
             <li>
-              <a href="/industries/gaming">Gaming</a>
+              <a href="/industries/gaming">Hearthstone Inn</a>
             </li>
           </ul>
         </div>
 
         {/* Column 4: Company */}
         <div>
-          <h4 className="font-semibold mb-4">Company</h4>
+          <h4 className="font-semibold mb-4">Pages </h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li>
-              <a href="/about">About Us</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="/success-stories">Success Stories</a>
+              <a href="/">Service</a>
             </li>
             <li>
-              <a href="/pricing">Pricing</a>
+              <a href="/">Our_Clients</a>
             </li>
             <li>
-              <a href="/academy">Ninja Academy</a>
+              <a href="/">Work</a>
             </li>
             <li>
-              <a href="/affiliate">Affiliate Program</a>
+              <a href="/">Company</a>
             </li>
-            <li>
-              <a href="/careers">Careers</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
+           
           </ul>
         </div>
       </Container>

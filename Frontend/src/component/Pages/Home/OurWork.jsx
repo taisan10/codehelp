@@ -9,7 +9,7 @@ const worksData = [
    {
     id: 1,
     name: "Triveeni Events",
-    img: "/Our_Service/6.png",
+    img: "/Our_Service/1.png",
     theme: "bg-green-100 text-black",
 
     description: "Healthcare brand awareness campaign in 2 months.",
@@ -20,26 +20,11 @@ const worksData = [
       { label: "Organic Reach", value: "89%" },
     ],
   },
-   {
+    {
     id: 2,
-    name: "BB_Station",
-    img: "/Our_Service/8.png",
-    theme: "bg-blue-300 text-black",
-
-    description: "ForexWorld boosted lead generation via campaigns.",
-    stats: [
-    { label: "Total Views", value: "79K+" },
-      { label: "Accounts Reached", value: "48K+" },
-      { label: "Followers (Stable Base)", value: "3.9k" },
-      { label: "Total Interactions", value: "439" },
-    ],
-  },
- 
-  {
-    id: 3,
     name: "Nayya",
-img: "/Our_Service/3.png",
-theme: "bg-yellow-50 text-black",
+img: "/Our_Service/2.png",
+theme: "bg-black-50 text-white",
 
     description: "Boosted E-commerce sales with influencer marketing.",
     stats: [
@@ -50,10 +35,11 @@ theme: "bg-yellow-50 text-black",
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: "Pita Nutso",
-   img: "/Our_Service/4.png",
-    theme: "bg-gradient-to-r from-purple-300 to-indigo-300 text-black",
+   img: "/Our_Service/3.png",
+    theme: " bg-yellow-50 text-black",   
+    // bg-gradient-to-r from-purple-300 to-indigo-300
 
     description: "AI Hub’s awareness campaign across social platforms.",
     stats: [
@@ -63,26 +49,12 @@ theme: "bg-yellow-50 text-black",
       { label: "Global Reach", value: "1.8M" },
     ],
   },
-  {
-    id: 5,
-    name: "Rivaaj",
-   img: "/Our_Service/5.png",
-   theme: "bg-blue-50 text-black",
-
-    description: "GamingOne launch campaign generated huge buzz.",
-    stats: [
-      { label: "Players Joined", value: "300K" },
-      { label: "Daily Active Users", value: "50K" },
-      { label: "Streams", value: "12K" },
-      { label: "Engagement Rate", value: "64%" },
-    ],
-  },
- {
-    id: 6,
+   {
+    id: 4,
     name: "Adda",
-    img: "/Our_Service/1.png",
+    img: "/Our_Service/4.png",
     alt: "uihhlh",
-   theme: "bg-gray-300 text-black",
+   theme: "bg-gray-600 text-black",
 
     description:
       "500,000 Views on Twitter in 3 Months: Influencer Marketing for Betmode’s Gambling Platform",
@@ -93,6 +65,35 @@ theme: "bg-yellow-50 text-black",
       { label: "Comments", value: "2,343" },
     ],
   },
+   {
+    id: 5,
+    name: "BB_Station",
+    img: "/Our_Service/5.png",
+    theme: "bg-yellow-600 text-black",
+
+    description: "ForexWorld boosted lead generation via campaigns.",
+    stats: [
+    { label: "Total Views", value: "79K+" },
+      { label: "Accounts Reached", value: "48K+" },
+      { label: "Followers (Stable Base)", value: "3.9k" },
+      { label: "Total Interactions", value: "439" },
+    ],
+  },
+ {
+    id: 6,
+    name: "HearthStone Inn",
+    img: "/Our_Service/6.png",
+    theme: "bg-[#233369] text-black",
+
+    description: "Web3Chain’s marketing campaign for crypto adoption.",
+    stats: [
+      { label: "Community Growth", value: "260K" },
+      { label: "Token Holders", value: "55K" },
+      { label: "Campaign Reach", value: "4.2M" },
+      { label: "Engagement Rate", value: "34%" },
+    ],
+  },
+
   {
     id: 7,
     name: "Sake Cafe",
@@ -107,10 +108,13 @@ theme: "bg-yellow-50 text-black",
       { label: "Active Teams", value: "8,200" },
     ],
   },
+  
+
+  
   {
     id: 8,
     name: "Desi_Garden",
-    img: "/Our_Service/2.png",
+    img: "/Our_Service/8.png",
     theme: "bg-green-200 text-black",
     description: "Fintech Corp drove massive user deposits through campaigns.",
     stats: [
@@ -136,18 +140,19 @@ theme: "bg-yellow-50 text-black",
   },
   {
     id: 10,
-    name: "Piink",
-    img: "/Our_Service/10.png",
-    theme: "bg-slate-400 text-black",
+    name: "Rivaaj",
+   img: "/Our_Service/10.png",
+   theme: "bg-blue-50 text-black",
 
-    description: "Web3Chain’s marketing campaign for crypto adoption.",
+    description: "GamingOne launch campaign generated huge buzz.",
     stats: [
-      { label: "Community Growth", value: "260K" },
-      { label: "Token Holders", value: "55K" },
-      { label: "Campaign Reach", value: "4.2M" },
-      { label: "Engagement Rate", value: "34%" },
+      { label: "Players Joined", value: "300K" },
+      { label: "Daily Active Users", value: "50K" },
+      { label: "Streams", value: "12K" },
+      { label: "Engagement Rate", value: "64%" },
     ],
   },
+  
 ];
 
 

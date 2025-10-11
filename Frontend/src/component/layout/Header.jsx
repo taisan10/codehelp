@@ -12,24 +12,31 @@ export default function Header() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    {
-      label: "Services",
-      children: [
-        { label: "Social Media", href: "/services/social-media" },
-        { label: "Graphic Designing", href: "/services/graphic-designing" },
-        { label: "Video Editing", href: "/services/video-editing" },
-      ],
-    },
+    // {
+    //   label: "Services",
+    //   children: [
+    //     { label: "Social Media", href: "/services/social-media" },
+    //     { label: "Graphic Designing", href: "/services/graphic-designing" },
+    //     { label: "Video Editing", href: "/services/video-editing" },
+    //   ],
+    // },
     {
       label: "Work",
       children: [
         { label: "Triveeni Events", href: "/Work/Triveeni Events" },
         { label: "BB_Station", href: "/Work/BB_Station" },
         { label: "Nayya", href: "/Work/Nayya" },
+        { label: "Adda Indian Eatery", href: "/Work/Adda Indian Eatery" },
+        { label: "Pita Nutso", href: "/Work/Pita Nutso" },
+        { label: "Sake Cafe", href: "/Work/Sake Cafe" },
+        { label: "Hearthstone Inn", href: "/Work/Hearthstone Inn" },
+        { label: "Nayya", href: "/Work/Nayya" },
+        { label: "Nayya", href: "/Work/Nayya" },
+        { label: "Nayya", href: "/Work/Nayya" },
       ],
     },
     // { label: "Work", href: "/work" },
-    { label: "Company", href: "/company" },
+    // { label: "Company", href: "/company" },
   ];
 
   // 🟢 Scroll Hide Navbar

@@ -15,44 +15,44 @@ export default function Kpi(){
                   title={<>The Next Era of Marketing, <GradientText>Designed for Growth
 </GradientText> </>}
                 />
-                <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-[50%_50%] lg:grid-cols-[24%_24%_48%] ">
+                <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-[50%_50%] md:grid-cols-[50%_50%] lg:grid-cols-[24%_24%_48%] ">
                   <Stat
                     kpi="24"
-                    accent="purple"
+                  
                     title="Hours Turnaround"
                     desc="Launch projects in less than a day. Perfect for those tight deadlines and urgent tasks."
                   />
                   <Stat
-                    kpi="50%+"
-                    accent="pink"
-                    title="Output Growth"
-                    desc="Get ready for a major marketing scale‑up. Outpace your average agency’s output."
+                    kpi="3x"
+                   
+                    title="Faster Go-to-Market"
+                    desc="Accelerate launches with agile strategy and creative execution."
                   />
                   <Stat
-                    kpi="$100k"
-                    accent="orange"
-                    title="Saving"
-                    desc="Average saving on annual agency fees."
+                    kpi="100%"
+                  
+                    title="Transparent Pricing"
+                    desc="No hidden fees. No fine print. Only clear, results-driven value."
                   />
                 </div>
                 <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-[48%_48%] lg:grid-cols-[48%_24%_24%]">
                   <Stat
-                    kpi="10"
-                    accent="sky"
-                    title="Extra Hours/Week"
-                    desc="Reclaim your schedule with simplified management. Take your time back to lead."
+                    kpi="15+"
+                   
+                    title="Industries Served"
+                    desc="From cafés to hotels, proven strategies that drive real growth across every niche."
                   />
                   <Stat
-                    kpi="30+"
-                    accent="purple"
-                    title="Services On Tap"
-                    desc="Every design and marketing service you can imagine. Available to you on‑demand."
+                    kpi="100%"
+                   
+                    title="Data-Driven Decisions"
+                    desc="Every strategy is backed by analytics. No guesswork, just results."
                   />
                   <Stat
-                    kpi="1%"
-                    accent="orange"
-                    title="Top 1% Global Experts"
-                    desc="Build a ready‑to‑go vetted team. Watch your ROI shoot sky‑high."
+                    kpi="24/7"
+                    
+                    title="Strategic Support"
+                    desc="Always available to align, analyze, and advance your marketing goals."
                   />
                 </div>
               </Container>

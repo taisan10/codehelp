@@ -210,13 +210,39 @@ export function LogoCarousel({ items }) {
             key={index}
             src={src}
             alt={`Logo ${index}`}
-            className="h-32 w-auto opacity-80 hover:opacity-100 transition"
+            className="h-32 w-auto opacity-100 hover:opacity-90 transition"
           />
         ))}
       </div>
     </section>
   );
 }
+
+
+// export function LogoCarousel({ items }) {
+//   return (
+//     <section className="py-10 overflow-hidden">
+//       <div className="animate-slide flex gap-10 items-center whitespace-nowrap w-max">
+//         {[...items, ...items].map((logo, index) => (
+//           <a
+//             key={index}
+//             href={logo.href}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             <img
+//               src={logo.image}
+//               alt={`Logo ${index + 1}`}
+//               className="h-32 w-auto opacity-100 hover:opacity-90 transition"
+//             />
+//           </a>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
+
 
 export function CaseStudySection({ title, description, image }) {
   return (
